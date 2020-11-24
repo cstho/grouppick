@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GroupPick</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="grouppick.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GroupPick</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Classroom Group Picker and Selector (Random)</h1>
+        <form>
+          <label>Number of Groups</label>
+          <input class="form-control" type="number" id="numgroup" value="2">
+
+          <div class="form-group">
+            <label class="mt-3" for="studentlist">Students List seperated by commas</label>
+            <textarea class="form-control" id="studentlist" rows="20">Student1, Student2, Student3, Student4</textarea>
+          </div>
+        </form>
+        <button type="button" class="btn btn-primary" onclick="randomGroup()"> <i class="fas fa-random"></i> Create Group</button>
+
+        <div class="container mt-3">
+          <button type="button" class="btn btn-success" onclick="pickGroup()" id="groupDone" style="visibility:hidden"> <i class="fas fa-bolt"></i> Pick Random Group</button>
+          <div  class ="mt-3"></div>
+          <div class="card text-white bg-success mb-3" id = "picker" style="display: none;">
+            <div class="card-header">Random Group</div>
+            <div class="card-body">
+              <h5 class="card-title" id = "randomgroup"></h5>
+            </div>
+          </div>
+          <div class="mt-3" id="groupcards"></div>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <div class="container">
+    <span class="text-muted">@cstho</span>
+    <p></p>
+  </div>
+</body>
+
+</html>
